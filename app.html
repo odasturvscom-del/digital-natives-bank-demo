@@ -1,0 +1,44 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Egora — app demo</title><link rel="stylesheet" href="styles.css"></head><body>
+<div class="wrap">
+<nav class="top"><a class="logo" href="index.html"><span class="mark">e</span>egora</a><div class="links"><a href="index.html">Landing</a><a href="platform.html">Platform</a><a href="admin.html">Admin</a></div><a class="btn ink sm" href="#waitlist">Get early access</a></nav>
+<section style="padding:20px 0 10px"><span class="eyebrow">Mobile app demo</span><h2 class="sec">Tap through it like it's live</h2><p class="lead">One phone below is fully clickable: home, money, cards and deals. Mock data only.</p></section>
+<div style="display:flex;gap:36px;justify-content:center;flex-wrap:wrap;padding:20px 0 60px">
+<div class="phone"><div class="screen">
+<div class="app-head"><b>egora</b><div class="avatar"></div></div>
+<div class="balance"><div class="lbl">Your balance <span class="chip" style="background:#fff">USD</span></div><div class="amt">$3,198.20</div><span class="chip lime" style="margin-top:8px">See all payments</span></div>
+<div class="quick"><button class="tile p" onclick="go('money')"><span class="ar">↗</span>Send money</button><button class="tile l" onclick="go('money')"><span class="ar">↙</span>Request money</button></div>
+<div style="margin:12px 18px 0;background:#fff;border-radius:18px;padding:12px 14px;font-size:12.5px"><b>This week</b><br><span style="color:var(--muted)">+$850 Lush Skincare · escrow released<br>+$400 YouTube payout · converted at 1,531</span></div>
+<div class="tabbar"><button class="on" onclick="go('home',this)">🏠</button><button onclick="go('money',this)">💰</button><button onclick="go('cards',this)">💳</button><button onclick="go('deals',this)">🤝</button></div>
+</div></div>
+
+<div class="phone"><div class="screen">
+<div class="app-head"><b style="font-size:15px">Send money</b><span onclick="go('home')" style="cursor:pointer">✕</span></div>
+<div style="text-align:center;padding:26px 18px 8px"><div style="font-size:13px;font-weight:700;color:var(--muted)">Amount</div><div style="font-size:40px;font-weight:800;letter-spacing:-.02em">$200<span style="font-size:20px">.00</span></div><div style="font-size:12px;color:var(--muted)">from USD balance $3,198.20</div></div>
+<div style="margin:10px 18px;background:#fff;border-radius:18px;padding:14px;font-size:13px;display:flex;justify-content:space-between"><div><b>To · Amara O.</b><br><span style="color:var(--muted)">GTBank · 0123••••89</span></div><span class="chip sky">NGN</span></div>
+<div style="margin:12px 18px;background:#ECF7C2;border-radius:16px;padding:12px 14px;font-size:12.5px">Arrives as <b>₦306,200</b> · rate 1,531 · fee $0 <span class="chip lime" style="margin-left:4px">1.5% spread shown</span></div>
+<button class="btn ink" style="width:calc(100% - 36px);margin:14px 18px 0" onclick="this.textContent='Sent ✓ ₦306,200 arriving'">Slide to send →</button>
+<div class="tabbar"><button onclick="go('home')">🏠</button><button class="on">💰</button><button onclick="go('cards')">💳</button><button onclick="go('deals')">🤝</button></div>
+</div></div>
+
+<div class="phone"><div class="screen">
+<div class="app-head"><b>egora</b><div class="avatar"></div></div>
+<div class="balance" style="background:var(--lav)"><div class="lbl">Receive like a local</div><div class="amt" style="font-size:22px">EGORA USD ACCOUNT</div><div style="font-size:12.5px;background:#fff;border-radius:12px;padding:10px;margin-top:10px;font-family:ui-monospace,monospace">Community Federal Savings Bank<br>Acc 843••••2210 · Routing 026••••••</div></div>
+<div style="margin:0 18px;font-size:12.5px;color:var(--muted)">YouTube, TikTok Creators, brand clients and Stripe pay straight into this. Payout to your Nigerian bank takes one tap.</div>
+<div class="quick" style="margin-top:12px"><button class="tile s"><span class="ar">↙</span>Receive USD</button><button class="tile c"><span class="ar">⚡</span>Payout to ₦</button></div>
+<div class="tabbar"><button class="on">🏠</button><button onclick="go('money')">💰</button><button onclick="go('cards')">💳</button><button onclick="go('deals')">🤝</button></div>
+</div></div>
+
+<div class="phone"><div class="screen">
+<div class="app-head"><b style="font-size:15px">Deals & marketplace</b><span>🔍</span></div>
+<div style="margin:12px 18px 0;background:#fff;border-radius:18px;padding:14px;font-size:13px"><b>Lush Skincare · $1,200</b><br><span style="color:var(--muted)">2 Reels + 1 story · due Fri</span><div style="margin-top:8px"><span class="pill y">In escrow</span></div></div>
+<div style="margin:10px 18px;background:#fff;border-radius:18px;padding:14px;font-size:13px"><b>Nova FM · $850</b><br><span style="color:var(--muted)">Podcast ad read · delivered</span><div style="margin-top:8px"><span class="pill g">Released ✓</span></div></div>
+<div style="margin:10px 18px;background:var(--ink);color:#fff;border-radius:18px;padding:14px;font-size:13px"><b>Marketplace</b><br><span style="opacity:.8">3 briefs match your profile today</span><div style="margin-top:8px"><span class="chip lime">View briefs</span></div></div>
+<div class="tabbar"><button class="on" onclick="go('deals')">🤝</button></div>
+</div></div>
+</div>
+<footer>Egora is a working name · demo with mock data, not a real bank · <a href="index.html">Landing</a> · <a href="platform.html">Platform</a> · <a href="admin.html">Admin</a></footer>
+</div>
+<script>
+function go(id,btn){document.querySelectorAll('.phone')[0].querySelectorAll('.tabbar button').forEach(b=>b.classList.remove('on'));if(btn)btn.classList.add('on');}
+</script>
+</body></html>

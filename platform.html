@@ -1,0 +1,60 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Egora — platform demo</title><link rel="stylesheet" href="styles.css"></head><body>
+<div class="shell">
+<aside class="side"><a class="logo" href="index.html"><span class="mark">e</span>egora</a>
+<a class="on" href="#">🏠 Home</a><a href="#">💰 Money</a><a href="#">🤝 Deals & escrow</a><a href="#">🛍 Storefront</a><a href="#">🧭 Marketplace</a><a href="#">📊 Analytics</a><a href="#">⚙️ Settings</a>
+<div style="margin-top:auto;font-size:11px;opacity:.7">Demo · mock data</div></aside>
+<main class="main">
+<div class="topbar">
+<div><h2 style="font-size:22px;font-weight:800">Good morning, Amara ✦</h2><div style="font-size:13px;color:var(--muted)">Creator account · @amaracreates</div></div>
+<div class="switch" id="sw"><button class="on" onclick="view('c',this)">Creator view</button><button onclick="view('b',this)">Business view</button></div>
+</div>
+
+<div id="creator">
+<div class="stats">
+<div class="stat"><div class="l">USD balance</div><div class="v">$3,198.20</div><div class="d up">+$850 this week</div></div>
+<div class="stat"><div class="l">NGN balance</div><div class="v">₦1,246,500</div><div class="d up">payout ready</div></div>
+<div class="stat"><div class="l">In escrow</div><div class="v">$2,050</div><div class="d" style="color:#7A5A08">2 deals in flight</div></div>
+<div class="stat"><div class="l">This month</div><div class="v">$4,210</div><div class="d up">+18% vs Sep</div></div>
+</div>
+<div class="grid2">
+<div class="panel"><h3>Deals & escrow</h3><table class="t"><tr><th>Brand</th><th>Amount</th><th>Status</th></tr>
+<tr><td>Lush Skincare</td><td>$1,200</td><td><span class="pill y">In escrow</span></td></tr>
+<tr><td>Nova FM</td><td>$850</td><td><span class="pill g">Released ✓</span></td></tr>
+<tr><td>Kwara Books</td><td>$2,300</td><td><span class="pill b">Invoice sent</span></td></tr></table>
+<button class="btn purple sm" style="margin-top:12px">New invoice +</button></div>
+<div class="panel"><h3>Convert & pay out</h3>
+<div style="font-size:13px;color:var(--muted);margin-bottom:10px">Convert USD → NGN</div>
+<div style="display:flex;align-items:center;gap:10px"><input value="$1,000" style="border:2px solid #EDEAE0;border-radius:14px;padding:12px 14px;font-weight:800;font-size:18px;width:120px;font-family:inherit"><span style="font-weight:800">→</span><div style="background:#ECF7C2;border-radius:14px;padding:12px 14px;font-weight:800;font-size:18px">₦1,531,000</div></div>
+<div style="font-size:12px;color:var(--muted);margin:10px 0">Rate 1,531 · 1.5% spread shown upfront · no hidden fees</div>
+<button class="btn ink sm">Pay out to GTBank ·•••89</button></div>
+</div>
+<div class="grid2">
+<div class="panel"><h3>Where your money comes from</h3><div class="bars"><div class="b" style="height:80%;background:var(--purple)"><i>42%</i><span>YouTube</span></div><div class="b" style="height:62%;background:var(--lime)"><i>31%</i><span>Brand deals</span></div><div class="b" style="height:36%;background:var(--sky)"><i>15%</i><span>TikTok</span></div><div class="b" style="height:28%;background:var(--coral)"><i>12%</i><span>Affiliate</span></div></div></div>
+<div class="panel"><h3>Your storefront</h3><div style="display:flex;gap:12px;align-items:center"><div style="width:52px;height:52px;border-radius:16px;background:linear-gradient(135deg,var(--purple),var(--coral))"></div><div><b>egora.link/amara</b><div style="font-size:12px;color:var(--muted)">4 products · 2 services · checkout live</div></div></div>
+<div class="pillrow"><span class="chip purple">Merch ×2</span><span class="chip lime">1:1 coaching</span><span class="chip sky">Presets pack</span></div>
+<button class="btn ghost sm" style="margin-top:12px">Open storefront →</button></div>
+</div>
+</div>
+
+<div id="business" style="display:none">
+<div class="stats">
+<div class="stat"><div class="l">Today's orders</div><div class="v">18</div><div class="d up">+6 vs yesterday</div></div>
+<div class="stat"><div class="l">Sales this week</div><div class="v">₦412,800</div><div class="d up">+22%</div></div>
+<div class="stat"><div class="l">In escrow (yours)</div><div class="v">₦186,000</div><div class="d" style="color:#7A5A08">funds held, protected</div></div>
+<div class="stat"><div class="l">Storefront conversion</div><div class="v">4.8%</div><div class="d up">DM checkout</div></div>
+</div>
+<div class="grid2">
+<div class="panel"><h3>Recent orders</h3><table class="t"><tr><th>Customer</th><th>Item</th><th>Total</th><th>Status</th></tr>
+<tr><td>Tola A.</td><td>Shea set ×2</td><td>₦24,000</td><td><span class="pill g">Paid ✓</span></td></tr>
+<tr><td>IG DM · @bee</td><td>Glow oil</td><td>₦12,500</td><td><span class="pill y">Awaiting pickup</span></td></tr>
+<tr><td>Web checkout</td><td>Bundles ×3</td><td>₦38,000</td><td><span class="pill g">Paid ✓</span></td></tr></table></div>
+<div class="panel"><h3>Book & pay a creator</h3><p style="font-size:13px;color:#3c3d4d">Fund a booking into escrow. The creator sees the money is held before they lift a finger.</p>
+<div style="display:flex;gap:10px;margin-top:12px;flex-wrap:wrap"><span class="chip purple">@amaracreates · 2 Reels</span><span class="chip lime">₦450,000 · escrow</span><span class="chip sky">Releases on delivery</span></div>
+<button class="btn ink sm" style="margin-top:12px">New booking +</button></div>
+</div>
+<div class="panel"><h3>Your verified storefront</h3><div style="display:flex;gap:12px;align-items:center;margin-bottom:10px"><div style="width:52px;height:52px;border-radius:16px;background:var(--sky);display:grid;place-items:center">✓</div><div><b>lushskincare.ng · verified</b><div style="font-size:12px;color:var(--muted)">Instagram connected · 48k followers · badge shows escrow protection</div></div></div>
+<div class="pillrow"><span class="chip green">Escrow on</span><span class="chip purple">DM checkout</span><span class="chip gray">Payouts daily 6pm</span></div></div>
+</div>
+</main></div>
+<script>function view(v,btn){document.getElementById('sw').querySelectorAll('button').forEach(b=>b.classList.remove('on'));btn.classList.add('on');document.getElementById('creator').style.display=v==='c'?'block':'none';document.getElementById('business').style.display=v==='b'?'block':'none';}</script>
+</body></html>

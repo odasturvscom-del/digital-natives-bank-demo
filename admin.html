@@ -1,0 +1,37 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Egora — admin portal demo</title><link rel="stylesheet" href="styles.css"></head><body>
+<div class="shell">
+<aside class="side"><a class="logo" href="index.html"><span class="mark">e</span>egora</a>
+<a class="on" href="#">📊 Overview</a><a href="#">🪪 KYC queue</a><a href="#">👥 Users</a><a href="#">🏪 Businesses</a><a href="#">💳 Transactions</a><a href="#">🚨 Risk & limits</a><a href="#">🔧 Partner rails</a>
+<div style="margin-top:auto;font-size:11px;opacity:.7">Signed in as Ops · Admin</div></aside>
+<main class="main">
+<div class="topbar"><div><h2 style="font-size:22px;font-weight:800">Admin overview</h2><div style="font-size:13px;color:var(--muted)">Nigeria · production-shaped demo data</div></div>
+<div class="pillrow" style="margin:0"><span class="chip gray">Viewer</span><span class="chip sky">Analyst</span><span class="chip purple">Approver</span><span class="chip ink" style="background:var(--ink);color:#fff">Admin</span></div></div>
+<div class="stats">
+<div class="stat"><div class="l">Active users</div><div class="v">12,482</div><div class="d up">+640 this month</div></div>
+<div class="stat"><div class="l">Businesses</div><div class="v">1,204</div><div class="d up">+112</div></div>
+<div class="stat"><div class="l">Held in escrow</div><div class="v">₦86.4m</div><div class="d" style="color:#7A5A08">318 open deals</div></div>
+<div class="stat"><div class="l">FX spread (avg)</div><div class="v">1.5%</div><div class="d">floor 1.2 · cap 2.2</div></div>
+</div>
+<div class="panel"><h3>KYC review queue · 14 pending</h3><table class="t"><tr><th>User</th><th>Type</th><th>Checks</th><th>Status</th><th>Action</th></tr>
+<tr><td><b>Amara O.</b></td><td>Creator</td><td>BVN ✓ · selfie ✓ · address ✓</td><td><span class="pill b" data-s="pending">Pending</span></td><td><button class="btn sm" style="background:var(--lime)" onclick="dec(this,'Approved')">Approve</button> <button class="btn sm ghost" onclick="dec(this,'Flagged')">Flag</button></td></tr>
+<tr><td><b>Lush Skincare Ltd</b></td><td>Business</td><td>CAC ✓ · director ✓ · IG ✓</td><td><span class="pill b" data-s="pending">Pending</span></td><td><button class="btn sm" style="background:var(--lime)" onclick="dec(this,'Approved')">Approve</button> <button class="btn sm ghost" onclick="dec(this,'Flagged')">Flag</button></td></tr>
+<tr><td><b>Tobi K.</b></td><td>Creator</td><td>BVN ✓ · selfie ✗</td><td><span class="pill b" data-s="pending">Pending</span></td><td><button class="btn sm" style="background:var(--lime)" onclick="dec(this,'Approved')">Approve</button> <button class="btn sm ghost" onclick="dec(this,'Flagged')">Flag</button></td></tr></table></div>
+<div class="grid2">
+<div class="panel"><h3>Recent transactions</h3><table class="t"><tr><th>Ref</th><th>Flow</th><th>Amount</th><th>State</th></tr>
+<tr><td>#82140</td><td>YouTube payout → USD acc</td><td>$400.00</td><td><span class="pill g">Settled</span></td></tr>
+<tr><td>#82139</td><td>USD → NGN payout</td><td>₦612,400</td><td><span class="pill g">Settled</span></td></tr>
+<tr><td>#82136</td><td>Escrow fund · Nova FM</td><td>$850.00</td><td><span class="pill p">Held</span></td></tr>
+<tr><td>#82131</td><td>Virtual card spend · Meta Ads</td><td>$120.00</td><td><span class="pill g">Approved</span></td></tr></table></div>
+<div class="panel"><h3>Risk & limits</h3>
+<div style="font-size:13px;margin-bottom:10px"><b>Tier 1 (BVN):</b> receive $2,000/mo · payout ₦2m/mo · no advances</div>
+<div style="font-size:13px;margin-bottom:10px"><b>Tier 2 (+address, 90d history):</b> receive $20,000/mo · advances eligible</div>
+<div style="font-size:13px"><b>Business tier:</b> escrow cap ₦5m/deal · marketplace payouts T+1</div>
+<div class="pillrow"><span class="chip coral">3 velocity flags today</span><span class="chip green">Chargebacks: 0</span><span class="chip gray">Advances: off until Q2</span></div></div>
+</div>
+<div class="panel"><h3>Partner rails status</h3><table class="t"><tr><th>Rail</th><th>Role</th><th>Health</th></tr>
+<tr><td>Anchor (CBN-licensed partner bank)</td><td>NGN accounts · cards · lending API</td><td><span class="pill g">Operational</span></td></tr>
+<tr><td>Fincra</td><td>USD/GBP/EUR receiving · cross-border payouts</td><td><span class="pill g">Operational</span></td></tr>
+<tr><td>Backup: Bloc / Flutterwave</td><td>Fallback integrations</td><td><span class="pill y">Not integrated yet</span></td></tr></table></div>
+</main></div>
+<script>function dec(btn,word){const p=btn.closest('tr').querySelector('[data-s]');p.textContent=word;p.className='pill '+(word==='Approved'?'g':'y');btn.parentElement.innerHTML='<span style="font-size:12px;color:var(--muted)">Action logged (demo)</span>';}</script>
+</body></html>
